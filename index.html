@@ -1,0 +1,12 @@
+<iframe id="vimeoPlayer" src="https://player.vimeo.com/video/712624553?autoplay=0&loop=1&muted=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" ></iframe>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+    var iframe = document.getElementById('vimeoPlayer');
+    var player = new Vimeo.Player(iframe);
+
+    player.play().then(function() {
+        console.log('Video played');
+    }).catch(function(error) {
+        console.error('Error playing video:', error.message);
+    });
+</script>
